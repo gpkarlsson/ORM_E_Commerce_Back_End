@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
           model: Category
         },
         {
-          model: ProductTag
+          model: Tag, through: ProductTag
         }
       ],
     });
@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
           model: Category
         },
         {
-          model: Tag
+          model: Tag, through: ProductTag
         }
       ],
     });
